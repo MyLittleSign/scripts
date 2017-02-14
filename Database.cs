@@ -8,9 +8,9 @@ public class Database : MonoBehaviour {
 	 *       - Cada palavra tem 1 som, 1 gesto e uma figura.
 	 *   - Cada exercício tem 4 tarefas para que o usuário faça a assimilação do aprendizado, e 3 estrelas para avaliar
 	 *     o usuário.
-	 *       - 1º tarefa:
-	 *       - 2º tarefa:
-	 *       - 3º tarefa:
-	 *       - 4º tarefa:
+	 *       - 1º tarefa: Mostra sinal de letra e um desenho de palavra a ser escolhido
+	 *       - 2º tarefa: Mostra símbolo de letra e sinal de letra a ser escolhido
+	 *       - 3º tarefa: Mostra sinal de palavra e sinal de letra a ser escolhido
+	 *       - 4º tarefa: Mostra desenho de palavra e sinal de palavra a ser escolhido
 	 */
 }
