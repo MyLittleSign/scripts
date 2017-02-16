@@ -5,13 +5,10 @@ using System;
 public class LetterButton : MonoBehaviour
 {
 	/* Cada botão que leva a uma cena de aprendizado de letras tem uma tag contendo a letra dele.
-	 * Exemplo de tag: "g"
-	 * 
+	 * Exemplo de tag: "g"	 * 
 	 * O atual script será anexado a um botão, e através de sua tag, reconhecerá a letra com a qual deve trabalhar.
-	 * 
 	 * Após reconhecer a letra, obterá todas as informações necessárias ao botão:
 	 *   - Disponível ou não ao usuário.
-	 * 
 	 * Após descobrir se está disponível ou não, este script altera a imagem do botão para a disponibilidade ficar
 	 * aparente.
 	 */
@@ -29,7 +26,7 @@ public class LetterButton : MonoBehaviour
 
 		s_enabled = String.Concat ("enabled_", letter);
 
-		if (PlayerPrefs.HasKey (s_enabled))
+		if (!PlayerPrefs.HasKey (s_enabled))
 		{
 			PlayerPrefs.SetInt (s_enabled, 0);
 		}
