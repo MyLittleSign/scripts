@@ -31,7 +31,7 @@ public class LetterButton : MonoBehaviour
 
 		if (!PlayerPrefs.HasKey (s_enabled))
 		{
-			if (letter == "a")
+			if (letter == "a") 
 			{
 				PlayerPrefs.SetInt (s_enabled, 1);
 			}
@@ -43,15 +43,18 @@ public class LetterButton : MonoBehaviour
 		else
 		{
 			enabled = PlayerPrefs.GetInt (s_enabled);
+		}
+	}
 
-			if (enabled == 1)
-			{
-				this.GetComponent <Button> ().interactable = true;
-			}
-			else
-			{
-				this.GetComponent <Button> ().interactable = false;
-			}
+	public void UpdateAppearance ()
+	{
+		if (enabled == 1)
+		{
+			this.GetComponent <Button> ().interactable = true;
+		}
+		else
+		{
+			this.GetComponent <Button> ().interactable = false;
 		}
 	}
 
