@@ -44,6 +44,8 @@ public class LetterButton : MonoBehaviour
 		{
 			enabled = PlayerPrefs.GetInt (s_enabled);
 		}
+
+		UpdateAppearance ();
 	}
 
 	public void UpdateAppearance ()

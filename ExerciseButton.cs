@@ -28,10 +28,31 @@ public class ExerciseButton : MonoBehaviour
 	private string s_step;
 	private int step;
 
+	public GameObject[] stars;
+
 	private void Awake ()
 	{
 		letters = this.gameObject.tag;
 		s_step = String.Concat ("step_", letters);
 		step = PlayerPrefs.GetInt (s_step);
+
+		UpdateAppearance ();
+	}
+
+	public void UpdateAppearance ()
+	{
+		stars [0].SetActive (false);
+		stars [1].SetActive (false);
+		stars [2].SetActive (false);
+
+		if (step >= 1) {
+			stars [0].SetActive (true);
+		}
+		if (step >= 2) {
+			stars [1].SetActive (true);
+		}
+		if (step >= 3) {
+			stars [2].SetActive (true);
+		}
 	}
 }
